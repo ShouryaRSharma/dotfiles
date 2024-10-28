@@ -1,0 +1,166 @@
+# Load secret variables
+source ~/.secret_vars
+
+# Oh My Posh initialization
+eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/spaceship.omp.json)"
+
+# ZSH syntax highlighting
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# ZSH auto-suggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Zsh completion initialization
+autoload -Uz compinit && compinit
+
+# Path additions
+export PATH="$PATH:/Users/shourya.sharma/.local/bin"
+export PATH="/opt/homebrew/opt/libtool/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/icu4c/bin:/opt/homebrew/opt/icu4c/sbin:$PATH"
+export PATH="/opt/homebrew/opt/openssl@3.0/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"
+
+# Pyenv setup
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+# Java setup
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+
+# Gcloud setup
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/shourya.sharma/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/shourya.sharma/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/shourya.sharma/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/shourya.sharma/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Kubeconfigs aggregated from multiple files
+export KUBECONFIG=$(find ~/.kube/ekscfg/kubeconfigs -type f | paste -s -d: -)
+
+# Library and include paths
+## zlib
+export LDFLAGS="-L/opt/homebrew/opt/zlib/lib $LDFLAGS"
+export CPPFLAGS="-I/opt/homebrew/opt/zlib/include $CPPFLAGS"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/zlib/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+## openssl@1.1
+export LDFLAGS="-L$(brew --prefix openssl@1.1)/lib $LDFLAGS"
+export CPPFLAGS="-I$(brew --prefix openssl@1.1)/include $CPPFLAGS"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@1.1/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+## openssl@3
+export LDFLAGS="$LDFLAGS -L$(brew --prefix openssl@3)/lib"
+export CPPFLAGS="$CPPFLAGS -I$(brew --prefix openssl@3)/include"
+export PKG_CONFIG_PATH="$(brew --prefix openssl@3)/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+## librdkafka (for confluent-kafka)
+local LIBRDKAFKA_BASE_PATH="/opt/homebrew/opt/librdkafka"
+export C_INCLUDE_PATH="$LIBRDKAFKA_BASE_PATH/include:$C_INCLUDE_PATH"
+export LIBRARY_PATH="$LIBRDKAFKA_BASE_PATH/lib:$LIBRARY_PATH"
+
+## openblas (for numpy)
+export OPENBLAS="$(brew --prefix openblas)"
+
+## postgresql@12 (for psycopg2)
+export LDFLAGS="-L/usr/local/opt/openssl/lib -L/opt/homebrew/opt/postgresql@12/lib $LDFLAGS"
+export CPPFLAGS="-I/usr/local/opt/openssl/include -I/opt/homebrew/opt/postgresql@12/include $CPPFLAGS"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/postgresql@12/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+## Java
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include -I/opt/homebrew/opt/openjdk@17/include $CPPFLAGS"
+
+## icu4c (for pyicu)
+export LDFLAGS="-L/opt/homebrew/opt/icu4c/lib $LDFLAGS"
+export CPPFLAGS="-I/opt/homebrew/opt/icu4c/include $CPPFLAGS"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+# Environment variables for grpcio
+export GRPC_PYTHON_BUILD_SYSTEM_ZLIB=1
+
+# Aliases
+alias aci='bash ~/aci'
+alias ecr-login='(pushd ~/dev > /dev/null && aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 871716277715.dkr.ecr.eu-west-1.amazonaws.com && popd > /dev/null)'
+alias pycharm='/Applications/PyCharm.app/Contents/MacOS/pycharm'
+alias intellij='/Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea'
+alias ld="lazydocker"
+alias lg="lazygit"
+if [ -f ~/.git.alias.zsh ]; then source ~/.git.alias.zsh; fi
+
+# Zoxide (better cd)
+eval "$(zoxide init zsh)"
+alias cd="z"
+
+# Eza (better ls)
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --grid"
+
+# FZF configuration
+source <(fzf --zsh)
+source ~/fzf-git.sh/fzf-git.sh
+
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+
+export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+# FZF completion functions
+_fzf_compgen_path() {
+  fd --hidden --exclude .git . "$1"
+}
+
+_fzf_compgen_dir() {
+  fd --type=d --hidden --exclude .git . "$1"
+}
+
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo ${}'"         "$@" ;;
+    ssh)          fzf --preview 'dig {}'                   "$@" ;;
+    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+  esac
+}
+
+# ZSH syntax highlighting configuration
+ZSH_HIGHLIGHT_STYLES[default]=none
+ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,bold
+ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=cyan,bold
+ZSH_HIGHLIGHT_STYLES[alias]=fg=green,bold
+ZSH_HIGHLIGHT_STYLES[builtin]=fg=green,bold
+ZSH_HIGHLIGHT_STYLES[function]=fg=green,bold
+ZSH_HIGHLIGHT_STYLES[command]=fg=green,bold
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=blue,underline
+ZSH_HIGHLIGHT_STYLES[commandseparator]=none
+ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=green
+ZSH_HIGHLIGHT_STYLES[path]=fg=yellow,underline
+ZSH_HIGHLIGHT_STYLES[globbing]=fg=blue
+ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=none
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=none
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=yellow
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=yellow
+ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=cyan
+ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=cyan
+ZSH_HIGHLIGHT_STYLES[assign]=none
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=cyan'
+
+# Set bat theme
+export BAT_THEME=cyberdream
+
+# Set Docker context
+export DOCKER_HOST=unix:///Users/shourya.sharma/.colima/default/docker.sock
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
