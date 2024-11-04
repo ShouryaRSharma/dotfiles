@@ -81,9 +81,9 @@ alias ld="lazydocker"
 alias lg="lazygit"
 alias cat="bat"
 alias cl="clear"
-if [ -f ~/.tmux.func.zsh ]; then source ~/.tmux.func.zsh; fi
+if [ -f ~/.tmux.alias.zsh ]; then source ~/.tmux.alias.zsh; fi
 if [ -f ~/.git.alias.zsh ]; then source ~/.git.alias.zsh; fi
-if [ -f ~/.ls.func.zsh ]; then source ~/.ls.func.zsh; fi
+if [ -f ~/.ls.alias.zsh ]; then source ~/.ls.alias.zsh; fi
 
 # Zoxide (better cd)
 eval "$(zoxide init zsh)"
