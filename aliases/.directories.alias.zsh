@@ -5,3 +5,7 @@ ls() {
         eza -a --color=always --icons=always --grid "$@"
     fi
 }
+
+# Zoxide (better cd)
+eval "$(zoxide init zsh)"
+alias cd="z"
