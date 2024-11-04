@@ -4,16 +4,6 @@ source ~/.secret_vars
 # Oh My Posh initialization
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/spaceship.omp.json)"
 
-# ZSH syntax highlighting
-export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# ZSH auto-suggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Zsh completion initialization
-autoload -Uz compinit && compinit
-
 # Path additions
 export PATH="$PATH:/Users/shourya.sharma/.local/bin"
 export PATH="/opt/homebrew/opt/libtool/libexec/gnubin:$PATH"
@@ -135,6 +125,24 @@ _fzf_comprun() {
   esac
 }
 
+# Set bat theme
+export BAT_THEME=cyberdream
+
+# Set Docker context
+export DOCKER_HOST=unix:///Users/shourya.sharma/.colima/default/docker.sock
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# ZSH syntax highlighting
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# ZSH auto-suggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Zsh completion initialization
+autoload -Uz compinit && compinit
+
 # ZSH syntax highlighting configuration
 ZSH_HIGHLIGHT_STYLES[default]=none
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,bold
@@ -158,12 +166,3 @@ ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=cyan
 ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=cyan
 ZSH_HIGHLIGHT_STYLES[assign]=none
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=cyan'
-
-# Set bat theme
-export BAT_THEME=cyberdream
-
-# Set Docker context
-export DOCKER_HOST=unix:///Users/shourya.sharma/.colima/default/docker.sock
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
