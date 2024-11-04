@@ -89,6 +89,10 @@ alias pycharm='/Applications/PyCharm.app/Contents/MacOS/pycharm'
 alias intellij='/Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea'
 alias ld="lazydocker"
 alias lg="lazygit"
+alias cat="bat"
+alias cl="clear"
+alias ta="tmux attach"
+alias tl="tmux ls"
 if [ -f ~/.git.alias.zsh ]; then source ~/.git.alias.zsh; fi
 
 # Zoxide (better cd)
