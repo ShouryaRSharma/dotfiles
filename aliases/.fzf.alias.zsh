@@ -32,21 +32,24 @@ _fzf_comprun() {
   esac
 }
 
-# Define color variables
+# Default color scheme
 fg="#ffffff"
 bg="#16181a"
-bg_alt="#1e2124"
 bg_highlight="#3c4048"
-grey="#7b8496"
-blue="#5ea1ff"
-green="#5eff6c"
-cyan="#5ef1ff"
-red="#ff6e5e"
-yellow="#f1ff5e"
-magenta="#ff5ef1"
-pink="#ff5ea0"
-orange="#ffbd5e"
 purple="#bd5eff"
+blue="#5ea1ff"
+cyan="#5ef1ff"
 
-# Set FZF default options in a single line
+# Check if the system is Linux
+if [[ "$(uname)" == "Linux" ]]; then
+  # Linux-specific color scheme
+  fg="#CBE0F0"
+  bg="#011628"
+  bg_highlight="#143652"
+  purple="#B388FF"
+  blue="#06BCE4"
+  cyan="#2CF9ED"
+fi
+
+# Set FZF default options with color references
 export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
