@@ -83,13 +83,11 @@ alias cat="bat"
 alias cl="clear"
 if [ -f ~/.tmux.func.zsh ]; then source ~/.tmux.func.zsh; fi
 if [ -f ~/.git.alias.zsh ]; then source ~/.git.alias.zsh; fi
+if [ -f ~/.ls.func.zsh ]; then source ~/.ls.func.zsh; fi
 
 # Zoxide (better cd)
 eval "$(zoxide init zsh)"
 alias cd="z"
-
-# Eza (better ls)
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --grid"
 
 # FZF configuration
 source <(fzf --zsh)
