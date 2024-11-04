@@ -170,6 +170,9 @@ eval "$(zoxide init zsh)"
 
 alias cd="z"
 
+# ---- More themes ----
+export TMUX_THEME='powerline/default/cyan'
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

@@ -123,9 +123,6 @@ _fzf_comprun() {
   esac
 }
 
-# Set bat theme
-export BAT_THEME=cyberdream
-
 # Set Docker context
 export DOCKER_HOST=unix:///Users/shourya.sharma/.colima/default/docker.sock
 
@@ -164,3 +161,7 @@ ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=cyan
 ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=cyan
 ZSH_HIGHLIGHT_STYLES[assign]=none
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=cyan'
+
+# Set themes
+export BAT_THEME=cyberdream
+export TMUX_THEME='basic'
