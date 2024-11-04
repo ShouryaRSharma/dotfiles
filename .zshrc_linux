@@ -115,9 +115,6 @@ eval "$(fzf --zsh)"
 
 source ~/aliases/.fzf.alias.zsh
 
-# ---- Directory management
-source ~/aliases/.directories.alias.zsh
-
 # ---- More themes ----
 export TMUX_THEME='powerline/default/cyan'
 
@@ -147,8 +144,9 @@ export TMUX_THEME='powerline/default/cyan'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-plugins=(git zsh-eza zsh-syntax-highlighting zsh-autosuggestions brew poetry poetry-env)
+plugins=(git zsh-eza zoxide zsh-syntax-highlighting zsh-autosuggestions brew poetry poetry-env)
 
+alias cd='z'
 source $ZSH/oh-my-zsh.sh
 
 
