@@ -91,8 +91,7 @@ alias ld="lazydocker"
 alias lg="lazygit"
 alias cat="bat"
 alias cl="clear"
-alias ta="tmux attach"
-alias tl="tmux ls"
+if [ -f ~/.tmux.func.zsh ]; then source ~/.tmux.func.zsh; fi
 if [ -f ~/.git.alias.zsh ]; then source ~/.git.alias.zsh; fi
 
 # Zoxide (better cd)
