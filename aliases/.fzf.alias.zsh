@@ -31,3 +31,35 @@ _fzf_comprun() {
     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
+
+# Define color variables
+fg="#ffffff"
+bg="#16181a"
+bg_alt="#1e2124"
+bg_highlight="#3c4048"
+grey="#7b8496"
+blue="#5ea1ff"
+green="#5eff6c"
+cyan="#5ef1ff"
+red="#ff6e5e"
+yellow="#f1ff5e"
+magenta="#ff5ef1"
+pink="#ff5ea0"
+orange="#ffbd5e"
+purple="#bd5eff"
+
+export FZF_DEFAULT_OPTS="
+  --color=fg:${fg},
+  bg:${bg},
+  hl:${purple},
+  fg+:${fg},
+  bg+:${bg_highlight},
+  hl+:${purple},
+  info:${blue},
+  prompt:${cyan},
+  pointer:${cyan},
+  marker:${cyan},
+  spinner:${cyan},
+  header:${cyan}
+"
+
