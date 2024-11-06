@@ -153,3 +153,13 @@ alias lsg="ls -l --git-status"      # Show git status
 # Keep the zoxide integration
 eval "$(zoxide init zsh)"
 alias cd="z"
+
+# Yazi aliases
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}

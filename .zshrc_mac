@@ -7,6 +7,9 @@ eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/spaceshi
 # Kubeconfigs aggregated from multiple files
 export KUBECONFIG=$(find ~/.kube/ekscfg/kubeconfigs -type f | paste -s -d: -)
 
+# Editor
+export EDITOR='vim'
+
 # Paths
 source ~/paths/.generic.paths.zsh
 source ~/paths/.python.paths.zsh
