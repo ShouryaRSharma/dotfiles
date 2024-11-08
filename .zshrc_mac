@@ -26,6 +26,7 @@ source ~/aliases/.directories.alias.zsh
 source ~/aliases/.fzf.alias.zsh
 source ~/aliases/.ide.alias.zsh
 source ~/aliases/.utils.alias.zsh
+source ~/aliases/.access.alias.zsh
 
 # Set Docker context
 export DOCKER_HOST=unix:///Users/shourya.sharma/.colima/default/docker.sock
