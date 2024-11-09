@@ -1,39 +1,8 @@
-# Add Homebrew to PATH and initialize it
+# ======================
+# ~/.zshrc.linux
+# ======================
+# Initialize Homebrew for Linux
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# Oh My Posh initialization
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/spaceship.omp.json)"
-
-# Editor
-export EDITOR='vim'
-
-# Paths
-source ~/paths/.generic.paths.zsh
-source ~/paths/.python.paths.zsh
-source ~/paths/.java.paths.zsh
-source ~/paths/.google.paths.zsh
-
-# Libraries and Flags
-source ~/paths/.flags.paths.zsh
-
-# Aliases
-source ~/aliases/.tmux.alias.zsh
-source ~/aliases/.git.alias.zsh
-source ~/aliases/.directories.alias.zsh
-source ~/aliases/.fzf.alias.zsh
-source ~/aliases/.ide.alias.zsh
-source ~/aliases/.utils.alias.zsh
-source ~/aliases/.access.alias.zsh
-
-# Set Docker context
-export DOCKER_HOST=unix:///Users/shourya.sharma/.colima/default/docker.sock
-
-# ZSH Syntax + Autosuggestions
-export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=$(brew --prefix)/share/zsh-syntax-highlighting/highlighters
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-autoload -Uz compinit && compinit
-
-# Themes
-source ~/themes/.cyberdream.theme.zsh
+# Set powerline TMUX theme for Linux
 export TMUX_THEME='powerline/default/cyan'

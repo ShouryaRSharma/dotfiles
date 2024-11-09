@@ -1,0 +1,33 @@
+# ======================
+# ~/.zshrc.common
+# ======================
+# Editor
+export EDITOR='vim'
+
+# Paths
+source ~/paths/.generic.paths.zsh
+source ~/paths/.python.paths.zsh
+source ~/paths/.java.paths.zsh
+source ~/paths/.google.paths.zsh
+
+# Libraries and Flags
+source ~/paths/.flags.paths.zsh
+
+# Aliases
+source ~/aliases/.tmux.alias.zsh
+source ~/aliases/.git.alias.zsh
+source ~/aliases/.directories.alias.zsh
+source ~/aliases/.fzf.alias.zsh
+source ~/aliases/.ide.alias.zsh
+source ~/aliases/.utils.alias.zsh
+source ~/aliases/.access.alias.zsh
+
+# Set Docker context
+export DOCKER_HOST=unix://$HOME/.colima/default/docker.sock
+
+# ZSH completion
+autoload -Uz compinit && compinit
+
+# Load Oh My Posh theme
+eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/spaceship.omp.json)"
+
