@@ -1,3 +1,5 @@
+typeset -A ZSH_HIGHLIGHT_STYLES
+
 # ZSH syntax highlighting configuration
 ZSH_HIGHLIGHT_STYLES[default]=none
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,bold
