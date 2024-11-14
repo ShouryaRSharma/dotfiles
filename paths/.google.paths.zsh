@@ -4,3 +4,5 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
 # The next line enables shell command completion for gcloud.
 if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
+# Add to Path
+export PATH="$HOME/google-cloud-sdk/bin:$PATH"
