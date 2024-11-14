@@ -20,3 +20,6 @@ source ~/themes/.cyberdream.theme.zsh
 # Finally, load the syntax highlighting and autosuggestions
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Created by `pipx` on 2024-11-14 19:37:49
+export PATH="$PATH:/Users/shourya.sharma/.local/bin"
