@@ -1,4 +1,4 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
-  url = https://github.com/username/repository.git
-  pushUrl = git@github.com:username/repository.git
+  url =https://github.com/ShouryaRSharma/nvimconfig.git
+  pushUrl =git@github.com:ShouryaRSharma/nvimconfig.git
