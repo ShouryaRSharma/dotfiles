@@ -11,6 +11,11 @@ elif [[ "$(uname)" == "Linux" ]]; then
     source ~/.zshrc_linux
 fi
 
+[[ $- != *i* ]] && return
+[[ -n $INSIDE_SOURCED_SHELL ]] && return
+export INSIDE_SOURCED_SHELL=1
+neofetch
+
 # Load syntax highlighting and autosuggestions
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=$(brew --prefix)/share/zsh-syntax-highlighting/highlighters
 
