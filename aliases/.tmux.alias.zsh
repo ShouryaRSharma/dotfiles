@@ -1,3 +1,5 @@
+alias tmux="TERM=xterm-256color tmux"
+
 # Function for new tmux session
 tn() {
     if [ -z "$1" ]; then
