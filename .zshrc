@@ -1,8 +1,6 @@
 # ======================
 # ~/.zshrc (Main file)
 # ======================
-# Load common configuration
-source ~/.zshrc.common
 
 # Load OS-specific configuration
 if [[ "$(uname)" == "Darwin" ]]; then
@@ -11,6 +9,8 @@ elif [[ "$(uname)" == "Linux" ]]; then
     source ~/.zshrc_linux
 fi
 
+# Load common configuration
+source ~/.zshrc.common
 
 # Load syntax highlighting and autosuggestions
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=$(brew --prefix)/share/zsh-syntax-highlighting/highlighters
