@@ -26,7 +26,11 @@ source ~/aliases/.access.alias.zsh
 export DOCKER_HOST=unix://$HOME/.colima/default/docker.sock
 
 # ZSH completion
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
 
 # Load Oh My Posh theme
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/spaceship.omp.json)"
