@@ -33,5 +33,5 @@ done
 compinit -C
 
 # Load Oh My Posh theme
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/spaceship.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/spaceship.omp.json)"
 
