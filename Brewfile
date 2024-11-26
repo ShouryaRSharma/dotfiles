@@ -76,5 +76,6 @@ brew "jandedobbeleer/oh-my-posh/oh-my-posh", link: false
 brew "jesseduffield/lazydocker/lazydocker"
 cask "chromedriver"
 cask "cloudflare-warp"
+cask "font-code-new-roman-nerd-font"
 cask "slack-cli"
 cask "xquartz"
