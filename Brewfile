@@ -47,6 +47,7 @@ brew "ncdu"
 brew "neofetch"
 brew "neovim"
 brew "node"
+brew "ollama", restart_service: true
 brew "openblas"
 brew "openjdk@11"
 brew "openjdk@17"
