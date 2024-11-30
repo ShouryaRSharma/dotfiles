@@ -1,0 +1,17 @@
+keymap:
+  attributes: a
+  environment: e
+  fullscreen: f
+  fullscreen-ci: n
+  logs: l
+  quit: q
+  shell: v
+  statistics: d
+  toggle-scroll: s
+  wrap-logs: w
+log_tail: 2000
+max_log_lines: 2000
+show_all_containers: true
+start_fullscreen: true
+start_scroll: true
+start_wrap: false
