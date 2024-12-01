@@ -1,0 +1,365 @@
+{
+    "pipx_spec_version": "0.1",
+    "venvs": {
+        "pocker-tui": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/pocker-tui/bin/pocker",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "charset-normalizer": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/pocker-tui/bin/normalizer",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "markdown-it-py": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/pocker-tui/bin/markdown-it",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "plotext": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/pocker-tui/bin/plotext",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "pygments": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/pocker-tui/bin/pygmentize",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "pocker"
+                    ],
+                    "apps_of_dependencies": [
+                        "normalizer",
+                        "markdown-it",
+                        "pygmentize",
+                        "plotext"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "pocker-tui",
+                    "package_or_url": "pocker-tui",
+                    "package_version": "1.17.1",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.0",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "poetry": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry/bin/poetry",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "build": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry/bin/pyproject-build",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "cachecontrol": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry/bin/doesitcache",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "charset-normalizer": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry/bin/normalizer",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "dulwich": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry/bin/dul-receive-pack",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry/bin/dul-upload-pack",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry/bin/dulwich",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "keyring": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry/bin/keyring",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "pkginfo": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry/bin/pkginfo",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "virtualenv": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry/bin/virtualenv",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "xattr": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry/bin/xattr",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "poetry"
+                    ],
+                    "apps_of_dependencies": [
+                        "pyproject-build",
+                        "doesitcache",
+                        "normalizer",
+                        "dul-receive-pack",
+                        "dul-upload-pack",
+                        "dulwich",
+                        "keyring",
+                        "pkginfo",
+                        "virtualenv",
+                        "xattr"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "poetry",
+                    "package_or_url": "poetry",
+                    "package_version": "1.8.4",
+                    "pinned": false,
+                    "pip_args": [
+                        "--force-reinstall"
+                    ],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.0",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "poetry@1-4-2": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry@1-4-2/bin/poetry",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "build": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry@1-4-2/bin/pyproject-build",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "cachecontrol": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry@1-4-2/bin/doesitcache",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "charset-normalizer": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry@1-4-2/bin/normalizer",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "dulwich": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry@1-4-2/bin/dul-receive-pack",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry@1-4-2/bin/dul-upload-pack",
+                                "__type__": "Path"
+                            },
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry@1-4-2/bin/dulwich",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "jsonschema": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry@1-4-2/bin/jsonschema",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "keyring": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry@1-4-2/bin/keyring",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "pkginfo": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry@1-4-2/bin/pkginfo",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "virtualenv": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry@1-4-2/bin/virtualenv",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "xattr": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/poetry@1-4-2/bin/xattr",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "poetry"
+                    ],
+                    "apps_of_dependencies": [
+                        "pyproject-build",
+                        "doesitcache",
+                        "normalizer",
+                        "dul-receive-pack",
+                        "dul-upload-pack",
+                        "dulwich",
+                        "jsonschema",
+                        "keyring",
+                        "pkginfo",
+                        "virtualenv",
+                        "xattr"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "poetry",
+                    "package_or_url": "poetry==1.4.2",
+                    "package_version": "1.4.2",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": "@1.4.2"
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.13.0",
+                "source_interpreter": {
+                    "__Path__": "/opt/homebrew/opt/python@3.13/libexec/bin/python",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        },
+        "posting": {
+            "metadata": {
+                "injected_packages": {},
+                "main_package": {
+                    "app_paths": [
+                        {
+                            "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/posting/bin/posting",
+                            "__type__": "Path"
+                        }
+                    ],
+                    "app_paths_of_dependencies": {
+                        "httpx": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/posting/bin/httpx",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "markdown-it-py": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/posting/bin/markdown-it",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "pygments": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/posting/bin/pygmentize",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "python-dotenv": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/posting/bin/dotenv",
+                                "__type__": "Path"
+                            }
+                        ],
+                        "watchfiles": [
+                            {
+                                "__Path__": "/Users/shourya.sharma/.local/pipx/venvs/posting/bin/watchfiles",
+                                "__type__": "Path"
+                            }
+                        ]
+                    },
+                    "apps": [
+                        "posting"
+                    ],
+                    "apps_of_dependencies": [
+                        "httpx",
+                        "dotenv",
+                        "markdown-it",
+                        "pygmentize",
+                        "watchfiles"
+                    ],
+                    "include_apps": true,
+                    "include_dependencies": false,
+                    "man_pages": [],
+                    "man_pages_of_dependencies": [],
+                    "man_paths": [],
+                    "man_paths_of_dependencies": {},
+                    "package": "posting",
+                    "package_or_url": "posting",
+                    "package_version": "2.2.0",
+                    "pinned": false,
+                    "pip_args": [],
+                    "suffix": ""
+                },
+                "pipx_metadata_version": "0.5",
+                "python_version": "Python 3.11.4",
+                "source_interpreter": {
+                    "__Path__": "/Users/shourya.sharma/.pyenv/shims/python3.11",
+                    "__type__": "Path"
+                },
+                "venv_args": []
+            }
+        }
+    }
+}
