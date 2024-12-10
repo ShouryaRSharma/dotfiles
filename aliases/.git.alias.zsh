@@ -230,6 +230,7 @@ alias gfo='git fetch origin'
 alias gg='git gui citool'
 alias gga='git gui citool --amend'
 alias ghh='git help'
+alias glsr='git ls-remote origin'
 alias glgg='git log --graph'
 alias glgga='git log --graph --decorate --all'
 alias glgm='git log --graph --max-count=10'
@@ -413,9 +414,14 @@ alias gk='\gitk --all --branches &!'
 alias gke='\gitk --all $(git log --walk-reflogs --pretty=%h) &!'
 
 gwtab() {
-  echo "Usage: gwtab <branch> <path>"
-  # If only 1 arg given, assume it's the path
-  # If -r is given, look for arg 1 in refs/heads
+  if [[ "$#" == 0 ]]; then
+    echo "Usage: git worktree add -b [-r] <branch> [<path>]"
+    echo "[-r] will look for the branch in refs/heads"
+    echo "If only 1 argument is given, it will be used as the path"
+    echo "If 2 arguments are given, the first will be used as the branch and the second as the path"
+    return
+  fi
+
   if [[ "$#" == 1 ]]; then
     git worktree add -b "$1" "$1"
   elif [[ "$1" == "-r" ]]; then
