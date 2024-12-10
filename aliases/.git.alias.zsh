@@ -412,6 +412,19 @@ alias gtl='gtl(){ git tag --sort=-v:refname -n --list "${1}*" }; noglob gtl'
 alias gk='\gitk --all --branches &!'
 alias gke='\gitk --all $(git log --walk-reflogs --pretty=%h) &!'
 
+gwtab() {
+  echo "Usage: gwtab <branch> <path>"
+  # If only 1 arg given, assume it's the path
+  # If -r is given, look for arg 1 in refs/heads
+  if [[ "$#" == 1 ]]; then
+    git worktree add -b "$1" "$1"
+  elif [[ "$1" == "-r" ]]; then
+    git worktree add -b "$2" "$2" "refs/heads/$2"
+  else
+    git worktree add -b "$1" "$2"
+  fi
+}
+
 unset git_version
 
 # Logic for adding warnings on deprecated aliases
