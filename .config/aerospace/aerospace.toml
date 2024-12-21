@@ -107,13 +107,19 @@ alt-shift-equal = 'resize smart +50'
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
-alt-b = 'workspace B' # for Browser
-alt-e = 'workspace E' # for File Explorer (Finder)
 alt-m = 'workspace M' # for Music
 alt-n = 'workspace N' # for Notes
 alt-p = 'workspace P' # for Photo Editing
 alt-t = 'workspace T' # for Terminal
 alt-v = 'workspace V' # for Video Editing
+
+alt-b = [
+  'workspace B',
+  'exec-and-forget open -a /Applications/Google\ Chrome.app',
+]
+alt-e = ['workspace E', 'exec-and-forget open -a finder']
+alt-i = ['workspace 1', 'exec-and-forget open -a iTerm']
+alt-s = ['workspace 2', 'exec-and-forget open -a Slack']
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 cmd-ctrl-alt-shift-1 = 'move-node-to-workspace 1'
