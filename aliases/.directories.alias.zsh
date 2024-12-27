@@ -139,6 +139,7 @@ ls() {
 }
 
 # Convenience aliases
+alias l="ls"                       # Default view
 alias ll="ls -l"                    # List view
 alias lt="ls -t"                    # Tree view
 alias lt2="ls -t -d 2"             # Tree view with depth 2
