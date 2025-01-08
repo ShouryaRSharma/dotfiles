@@ -28,5 +28,6 @@ background-opacity = 0.35
 background-blur-radius = 27
 
 macos-titlebar-proxy-icon = hidden
-command = tmux attach || tmux
+command = tmux
+shell-integration = zsh
 
