@@ -113,6 +113,13 @@ function ggpnp() {
 }
 compdef _git ggpnp=git-checkout
 
+function git-clone-bare() {
+    local repo_url=$1
+    local repo_name=$(basename $repo_url .git)
+    git clone --bare $repo_url $repo_name
+}
+alias gclb='git-clone-bare'
+
 alias ggpur='ggu'
 alias g='git'
 alias ga='git add'
