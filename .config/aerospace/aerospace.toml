@@ -118,7 +118,7 @@ alt-b = [
   'exec-and-forget open -a /Applications/Google\ Chrome.app',
 ]
 alt-e = ['workspace E', 'exec-and-forget open -a finder']
-alt-i = ['workspace 1', 'exec-and-forget open -a iTerm']
+alt-i = ['workspace 1', 'exec-and-forget open -a Ghostty']
 alt-s = ['workspace 2', 'exec-and-forget open -a Slack']
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
