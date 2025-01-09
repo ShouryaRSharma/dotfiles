@@ -29,6 +29,8 @@ background-blur-radius = 27
 
 macos-titlebar-proxy-icon = hidden
 command = tmux attach || tmux
-shell-integration = zsh
 link-url = true
+
+cursor-style = block
+shell-integration = zsh
 
