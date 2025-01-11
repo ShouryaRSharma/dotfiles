@@ -21,14 +21,16 @@ cursor-color = #ffffff
 selection-background = #3c4048
 selection-foreground = #ffffff
 
-font-family = "CodeNewRoman Nerd Font Mono"
-font-size = 17
+font-family = "JetBrains Mono"
+font-size = 16
+
+command = ~/.config/ghostty/tmux-command.sh
+quit-after-last-window-closed=false
 
 background-opacity = 0.35
 background-blur-radius = 27
 
 macos-titlebar-proxy-icon = hidden
-command = tmux attach || tmux
 link-url = true
 
 cursor-style = block
