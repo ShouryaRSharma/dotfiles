@@ -30,3 +30,4 @@ ta() {
 }
 
 alias tl="tmux ls"
+alias trs="tmux rename-session"
