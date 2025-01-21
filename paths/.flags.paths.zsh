@@ -15,9 +15,8 @@ export CPPFLAGS="$CPPFLAGS -I$(brew --prefix openssl@3)/include"
 export PKG_CONFIG_PATH="$(brew --prefix openssl@3)/lib/pkgconfig:$PKG_CONFIG_PATH"
 
 ## librdkafka (for confluent-kafka)
-local LIBRDKAFKA_BASE_PATH="$(brew --prefix librdkafka)"
-export C_INCLUDE_PATH="$LIBRDKAFKA_BASE_PATH/include:$C_INCLUDE_PATH"
-export LIBRARY_PATH="$LIBRDKAFKA_BASE_PATH/lib:$LIBRARY_PATH"
+export C_INCLUDE_PATH="$(brew --prefix librdkafka)/include:$C_INCLUDE_PATH"
+export LIBRARY_PATH="$(brew --prefix librdkafka)/lib:$LIBRARY_PATH"
 
 ## openblas (for numpy)
 export OPENBLAS="$(brew --prefix openblas)"
