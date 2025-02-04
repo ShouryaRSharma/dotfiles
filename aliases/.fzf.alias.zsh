@@ -5,7 +5,6 @@ bg_highlight="#3c4048"
 purple="#bd5eff"
 blue="#5ea1ff"
 cyan="#5ef1ff"
-
 [[ "$(uname)" == "Linux" ]] && {
    fg="#CBE0F0"
    bg="#011628"
@@ -37,15 +36,12 @@ smart_cd() {
        cd ~
        return
    fi
-
    [[ "$#" -eq 1 && -d "$1" ]] && {
        cd "$1"
        return
    }
-
    local dir
    dir=$(zoxide query "$@")
-
    if [[ $? -eq 0 && -d "$dir" ]]; then
        cd "$dir"
    else
@@ -57,7 +53,6 @@ smart_cd() {
                --height=80% \
                --border=rounded \
                --prompt="📁 CD > ")
-
        [[ -n "$dir" ]] && {
            cd "$dir"
            zoxide add "$dir"
@@ -68,21 +63,23 @@ smart_cd() {
 # FZF completion functions
 fzf_compgen_path() { $fd_base . "$1" }
 fzf_compgen_dir() { $fd_base --type d . "$1" }
+
+# Simple path-aware fzf_comprun
 fzf_comprun() {
-   local command=$1
-   shift
-   case "$command" in
-       cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
-       export|unset) fzf --preview "eval 'echo \${}'" "$@" ;;
-       ssh)          fzf --preview 'dig {}' "$@" ;;
-       *)            fzf --preview "$show_preview" "$@" ;;
-   esac
+    local command=$1
+    shift
+
+    # Check if we're completing a path (file or directory)
+    if [[ -e "$PWD/${COMP_WORDS[-1]}" ]] || [[ -d "$PWD/${COMP_WORDS[-1]}" ]]; then
+        fzf --preview "$show_preview" "$@"
+    else
+        fzf "$@"
+    fi
 }
 
 # Bind Ctr-space to directory completion
 zle -N fzf-smart-completion
 bindkey '^@' fzf-smart-completion
-
 fzf-smart-completion() {
     local dir
     dir=$(zoxide query -l | fzf --query "${BUFFER#cd }")
@@ -95,3 +92,8 @@ fzf-smart-completion() {
 # Initialize
 eval "$(zoxide init zsh)"
 alias cd="smart_cd"
+
+# FZF tab completion
+source ~/.zsh/fzf-zsh-completions.sh
+bindkey '^I' fzf_completion
+zstyle ':completion:*' fzf-search-display true
