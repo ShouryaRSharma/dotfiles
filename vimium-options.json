@@ -11,6 +11,18 @@
     {
       "passKeys": "",
       "pattern": "https?://vim-adventures.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.typing.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.typing.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://humanbenchmark.com/*"
     }
   ]
 }

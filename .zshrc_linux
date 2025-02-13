@@ -6,3 +6,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Set powerline TMUX theme for Linux
 export TMUX_THEME='powerline/default/cyan'
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
