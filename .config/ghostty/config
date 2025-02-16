@@ -23,6 +23,7 @@ selection-foreground = #ffffff
 
 font-family = "JetBrains Mono"
 font-size = 16
+font-family = "Flog Symbols"
 
 command = ~/.config/ghostty/tmux-command.sh
 quit-after-last-window-closed=false
