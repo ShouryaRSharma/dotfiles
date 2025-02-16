@@ -28,11 +28,13 @@ command = ~/.config/ghostty/tmux-command.sh
 quit-after-last-window-closed=false
 
 background-opacity = 0.35
-background-blur-radius = 27
+background-blur = true
 
 macos-titlebar-proxy-icon = hidden
+macos-icon = retro
 link-url = true
 
 cursor-style = block
 shell-integration = zsh
 
+auto-update = download
