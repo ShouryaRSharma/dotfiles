@@ -32,7 +32,7 @@ background-opacity = 0.35
 background-blur = true
 
 macos-titlebar-proxy-icon = hidden
-macos-icon = retro
+macos-icon = blueprint
 link-url = true
 
 cursor-style = block
