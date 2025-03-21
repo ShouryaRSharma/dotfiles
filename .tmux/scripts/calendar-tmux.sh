@@ -122,7 +122,7 @@ EOF
 		chmod +x "$TMP_SCRIPT"
 
 		(
-			tmux display-popup -w 80 -h 14 -s "bg=#242933,fg=#D8DEE9" "$TMP_SCRIPT"
+			tmux display-popup -w 80 -h 16 -s "bg=#242933,fg=#D8DEE9" "$TMP_SCRIPT"
 			rm "$TMP_SCRIPT"
 		) &
 	fi
