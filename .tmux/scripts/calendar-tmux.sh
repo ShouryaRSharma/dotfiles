@@ -96,7 +96,7 @@ if [ $mins_until_next -le 10 ]; then
 
 echo ''
 echo '╭───────────────────────────────────────────────────────────╮'
-echo '│                   ⚠️  MEETING STARTING  ⚠️                 │'
+echo '│                   ⚠️  MEETING STARTING  ⚠️                  │'
 echo '╰───────────────────────────────────────────────────────────╯'
 echo ''
 echo '  📅 $name'
