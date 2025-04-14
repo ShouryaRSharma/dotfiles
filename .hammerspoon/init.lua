@@ -15,8 +15,7 @@ vim:disableForApp("iTerm2")
 vim:disableForApp("Terminal")
 vim:disableForApp("Ghostty")
 vim:disableForApp("Ghostty.app")
-
-vim:useFallbackMode("Google Chrome")
+vim:disableForApp("Google Chrome")
 
 -- If you want the screen to dim (a la Flux) when you enter normal mode
 -- flip this to true.
@@ -33,7 +32,7 @@ vim:setAlertFont("Courier New")
 -- vim:enterWithSequence("jk")
 -- Only execute in Hammerspoon environment
 if hs then
-  vim:bindHotKeys({ enter = { {}, 'escape' } })
+	vim:bindHotKeys({ enter = { {}, "escape" } })
 end
 
 --------------------------------
