@@ -13,17 +13,6 @@ source ~/paths/.google.paths.zsh
 # Libraries and Flags
 source ~/paths/.flags.paths.zsh
 
-# ZSH Completion
-autoload -Uz compinit
-_zcompdump_path="$HOME/.zcompdump"
-
-# (Checks if file doesn't exist OR is older than 24 hours)
-if [[ ! -f "$_zcompdump_path" || -z "$_zcompdump_path"(N.mh+24) ]]; then
-  compinit -i -d "$_zcompdump_path"
-else
-  compinit -C -d "$_zcompdump_path"
-fi
-
 # Aliases
 source ~/aliases/.tmux.alias.zsh
 source ~/aliases/.git.alias.zsh
