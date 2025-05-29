@@ -1,0 +1,12 @@
+[[plugin.deps]]
+use = "wylie102/duckdb"
+rev = "02f902d"
+hash = "9893839d5134aaecf6fafbeff6cac18e"
+
+[[plugin.deps]]
+use = "ndtoan96/ouch"
+rev = "2496cd9"
+hash = "5b9dea47776a30946cfbf83232d18fb1"
+
+[flavor]
+deps = []
